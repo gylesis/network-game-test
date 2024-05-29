@@ -79,7 +79,7 @@ namespace Dev.PlayerLogic
         private void RPC_SetCursorState([RpcTarget] PlayerRef playerRef, bool isOn)
         {
             Cursor.visible = isOn;
-            Cursor.lockState = isOn ? CursorLockMode.None : CursorLockMode.Confined;
+            Cursor.lockState = isOn ? CursorLockMode.None : CursorLockMode.Locked;
         }
 
         private void SpawnPlayer(PlayerRef playerRef)

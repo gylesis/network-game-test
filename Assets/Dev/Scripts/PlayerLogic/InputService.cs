@@ -41,10 +41,8 @@ namespace Dev.PlayerLogic
                 Vector3 currentMousePos = Input.mousePosition;
                 
                 LocalPlayerInput localPlayerInput = new LocalPlayerInput();
-                Vector3 direction = (currentMousePos - _prevMousePos);
-                localPlayerInput.MouseDelta = direction.sqrMagnitude / 2;
-                localPlayerInput.MouseDelta *= Mathf.Sign(direction.x);
                 
+                localPlayerInput.MouseDelta = Input.GetAxis("Mouse X");
                 
                 LocalPlayerInput = localPlayerInput;
                 
